@@ -22,7 +22,6 @@ func getEmojis(emojis:[String]) -> [Emoji] {
             )
         completeEmojis.append(emoji)
     }
-    print("Count: \(completeEmojis.count)")
     
     return completeEmojis
 }
