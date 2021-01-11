@@ -19,6 +19,7 @@ class EmojiDefinitionViewController: UIViewController {
         super.viewDidLoad()
 
         blowUpEmojiLabel.text = emoji
+        emojiDefinitionLabel.text = emoji.unicodeScalars.first!.properties.name!.capitalized
     }
     
 
