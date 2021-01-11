@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  EmojiDictionary
-//
-//  Created by George Higbie on 1/9/21.
-//
+
 
 import UIKit
 
