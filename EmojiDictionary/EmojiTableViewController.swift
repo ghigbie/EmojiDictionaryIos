@@ -9,7 +9,7 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
-    let emojis = ["⛪️", "🕍", "🐪", "😼", "🐃"]
+    let emojis = ["⛪️", "🕍", "🐪", "😼", "🐃", "🦀", "🐛", "🐈", "🐈‍⬛", "🐄", "🐂"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,12 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Definition", sender: nil)
+        performSegue(withIdentifier: "Definition", sender: emojis[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let definitionVC = segue.destination as! EmojiDefinitionViewController
+        definitionVC.emoji = sender as! String
     }
 
 
