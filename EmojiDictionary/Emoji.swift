@@ -1,21 +1,11 @@
 import Foundation
 
-class Emoji {
+struct Emoji {
     var character = ""
     var definition = ""
     var year = 0
     var rating = 0.0
     var category = ""
-    
-    init(character: String, definition: String, year: Int, rating: Double, category: String){
-        
-        self.character = character
-        self.definition = definition
-        self.year = year
-        self.rating = rating
-        self.category = category
-        
-    }
 }
 
 let emojis = ["⛪️", "🕍", "🐪", "😼", "🐃", "🦀", "🐛", "🐈", "🐈‍⬛", "🐄", "🐂"]
