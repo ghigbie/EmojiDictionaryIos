@@ -3,9 +3,9 @@ import Foundation
 struct Emoji {
     var character = ""
     var definition = ""
-    var year = 0
-    var rating = 0.0
-    var category = ""
+    var year: Int? = 0
+    var rating: Double? = 0.0
+    var category: String? = ""
 }
 
 let emojis = ["⛪️", "🕍", "🐪", "😼", "🐃", "🦀", "🐛", "🐈", "🐈‍⬛", "🐄", "🐂"]

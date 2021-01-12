@@ -1,9 +1,3 @@
-//
-//  EmojiTableViewController.swift
-//  EmojiDictionary
-//
-//  Created by George Higbie on 1/9/21.
-//
 
 import UIKit
 
@@ -38,8 +32,11 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let definitionVC = segue.destination as! EmojiDefinitionViewController
-        definitionVC.emoji = sender as! String
+        if let definitionVC = segue.destination as? EmojiDefinitionViewController{
+            if let selectedEmoji = sender as? Emoji{
+                definitionVC.emoji = selectedEmoji
+            }
+        }
     }
 
 
